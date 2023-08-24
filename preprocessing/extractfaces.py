@@ -6,12 +6,12 @@ import face_recognition
 import cv2
 import shutil
 from time import perf_counter
-from helpers.helpers_face_extract_1 import *
-#import helpers.helpers_face_extract_1
-from helpers.helpers_read_video_1 import *
-#import helpers.helpers_read_video_1
-from helpers.blazeface import *
-#import blazeface
+#from helpers.helpers_face_extract_1 import *
+import helpers_face_extract_1
+#from helpers.helpers_read_video_1 import *
+import helpers_read_video_1
+#from helpers.blazeface import *
+import blazeface
 import sys
 import torch
 from blazeface import BlazeFace
