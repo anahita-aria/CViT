@@ -7,11 +7,11 @@ import cv2
 import shutil
 from time import perf_counter
 #from helpers.helpers_face_extract_1 import *
-import helpers_face_extract_1
+import helpers_face_extract_1.py
 #from helpers.helpers_read_video_1 import *
-import helpers_read_video_1
+import helpers_read_video_1.py
 #from helpers.blazeface import *
-import blazeface
+import blazeface.py
 import sys
 import torch
 from blazeface import BlazeFace
