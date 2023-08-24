@@ -60,7 +60,7 @@ def extract_face(dir_path):
                     os.makedirs(destination+str(file_num))
                 
                 if not os.path.isfile(destination+str(file_num)+'/metadata.json'):
-                    shutil.copy2(dir_path+item+'/metadata.json', destination+str(file_num)+'/metadata.json')
+                    shutil.copy2(dir_path + "/" +item+'/metadata.json', destination+str(file_num)+'/metadata.json')
                   
                 filtered_files = filter_unique_files(data)
                 
