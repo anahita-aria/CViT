@@ -9,8 +9,9 @@ from time import perf_counter
 import sys
 sys.path.insert(1,'helpers')
 sys.path.append('helpers/helpers_face_extract_1')
-import helpers_face_extract_1
-import helpers_read_video_1
+sys.path.append('helpers/helpers_read_video_1')
+#import helpers_face_extract_1
+#import helpers_read_video_1
 import blazeface
 import sys
 import torch
