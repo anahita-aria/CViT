@@ -20,9 +20,9 @@ from blazeface import BlazeFace
 # code used to extract DFDC dataset
 
 dir_path = "/kaggle/working/CViT/preprocessing/dfdc_data" 
-train_path = "dfdc_data/training_face_"
-validation_path = "dfdc_data/validation_face_"
-test_path = "dfdc_data/test_face_"
+train_path = "/kaggle/working/CViT/preprocessing/dfdc_data/training_face_"
+validation_path = "/kaggle/working/CViT/preprocessing/dfdc_data/validation_face_"
+test_path = "/kaggle/working/CViT/preprocessing/dfdc_data/test_face_"
   
 # load DFDC json
 def load_metadata(dir_path):
