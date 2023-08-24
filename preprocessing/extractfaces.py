@@ -10,9 +10,9 @@ from time import perf_counter
 
 import helpers_face_extract_1
 #from helpers.helpers_read_video_1 import *
-import helpers_read_video_1.py
+import helpers_read_video_1
 #from helpers.blazeface import *
-import blazeface.py
+import blazeface
 import sys
 import torch
 from blazeface import BlazeFace
