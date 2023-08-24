@@ -10,7 +10,7 @@ from time import perf_counter
 
 import sys
 sys.path.append('../helpers')
-import helpers_face_extract_1.py
+import helpers_face_extract_1
 #from helpers.helpers_read_video_1 import *
 import helpers_read_video_1.py
 #from helpers.blazeface import *
