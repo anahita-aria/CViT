@@ -39,8 +39,7 @@ def load_metadata(dir_path):
 def extract_face(dir_path):
     # iterate over DFDC dataset
     for item in sorted(os.listdir(dir_path)):
-        print("item")
-        print(item)
+        print("item", item)
         file_num = int(item[16:])
         destination = train_path
         
@@ -74,8 +73,10 @@ def extract_face(dir_path):
                         if data[filename]['label'].lower() == 'fake':
                             original = '_'+data[filename]['original'][:-4]
                         image_path = destination+str(file_num)+'/'+label
+                        print("image_path: ", image_path)
                         if not os.path.exists(image_path):
                             os.makedirs(image_path)
+                            print("image_path created: ", image_path)
                             
                         process_video(dir_path+item+'/'+filename, filename, image_path, original)
 
