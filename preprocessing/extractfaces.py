@@ -67,7 +67,9 @@ def extract_face(dir_path):
                 filtered_files = filter_unique_files(data)
                 
                 for filename in filtered_files:
-                    print("5555") 
+                    print("filename", filename)
+                    print("os.path.isfile(dir_path+item+'/'+filename): ", os.path.isfile(dir_path+item+'/'+filename))
+                    print("filename.endswith mp4 ", filename.endswith(".mp4"))
                     # check if the file name is found in metadata, and its label
                     if filename.endswith(".mp4") and os.path.isfile(dir_path+item+'/'+filename):
                         print("6666") 
