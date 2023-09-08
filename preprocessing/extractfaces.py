@@ -81,6 +81,7 @@ def extract_face(dir_path):
 
 # access video
 def process_video(video_path, filename, image_path, original):
+    print("Start method process_video")
     gpu = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     facedet = BlazeFace().to(gpu)
     facedet.load_weights("blazeface.pth")
@@ -101,9 +102,12 @@ def process_video(video_path, filename, image_path, original):
     face_extractor.keep_only_best_face(faces)
     n = 0
     for frame_data in faces:
+        print("loop1")
         for face in frame_data["faces"]:
+            print("loop2")
             face_locations = face_recognition.face_locations(face)
             for face_location in face_locations:
+                print("loop3")
             
                 top, right, bottom, left = face_location
                 face_image = face[top:bottom, left:right]
