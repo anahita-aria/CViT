@@ -108,7 +108,8 @@ def process_video(video_path, filename, image_path, original):
                 face_image = face[top:bottom, left:right]
                 resized_face = cv2.resize(face_image, (224, 224), interpolation=cv2.INTER_AREA)
                 resized_face = cv2.cvtColor(resized_face, cv2.COLOR_RGB2BGR)
-            
+                print("DEBUG  ")
+                print(image_path+"/"+filename[:-4]+original+"_"+str(n)+".jpg",resized_face, [int(cv2.IMWRITE_JPEG_QUALITY), 85])
                 cv2.imwrite(image_path+"/"+filename[:-4]+original+"_"+str(n)+".jpg",resized_face, [int(cv2.IMWRITE_JPEG_QUALITY), 85])
                 
                 n += 1
