@@ -39,7 +39,7 @@ def load_metadata(dir_path):
 def extract_face(dir_path):
     # iterate over DFDC dataset
     for item in sorted(os.listdir(dir_path)):
-        
+        print("item")
         file_num = int(item[16:])
         destination = train_path
         
