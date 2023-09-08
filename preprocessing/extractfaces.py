@@ -44,18 +44,20 @@ def extract_face(dir_path):
         destination = train_path
         
         if (file_num > 34 and file_num<45):
+            print("1111") 
             destination = validation_path 
         
         if (file_num > 45):
+            print("2222") 
             destination = test_path
         
         meta_full_path = os.path.join(dir_path, item)
         
         if os.path.isdir(meta_full_path):
             data = load_metadata(meta_full_path+'/')
-            
+            print("3333")   
             if data != 1:
-                
+                print("4444") 
                 if not os.path.exists(destination+str(file_num)):
                     os.makedirs(destination+str(file_num))
                 
@@ -65,12 +67,15 @@ def extract_face(dir_path):
                 filtered_files = filter_unique_files(data)
                 
                 for filename in filtered_files:
+                    print("5555") 
                     # check if the file name is found in metadata, and its label
                     if filename.endswith(".mp4") and os.path.isfile(dir_path+item+'/'+filename):
+                        print("6666") 
                         label = data[filename]['label'].lower()
                         # append fake video names with their corresponding real video names
                         original = ''
                         if data[filename]['label'].lower() == 'fake':
+                            print("7777") 
                             original = '_'+data[filename]['original'][:-4]
                         image_path = destination+str(file_num)+'/'+label
                         print("image_path: ", image_path)
