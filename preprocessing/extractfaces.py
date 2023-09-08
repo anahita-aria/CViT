@@ -40,6 +40,7 @@ def extract_face(dir_path):
     # iterate over DFDC dataset
     for item in sorted(os.listdir(dir_path)):
         print("item")
+        print(item)
         file_num = int(item[16:])
         destination = train_path
         
